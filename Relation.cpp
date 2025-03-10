@@ -130,7 +130,7 @@ void relation::moveLetter() {
 
 bool relation::checkWin() {
     for (int i = 0;i < tubes.size();i++) {
-        if (!(tubes[i].allSame())) {
+        if (!(tubes[i].allSame(tubeCapacity))) {
             return false;
         }
     }

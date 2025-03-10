@@ -16,7 +16,7 @@ public:
     std::vector<char>& getdata();
     bool push(char value);
     char pop();
-    bool allSame();
+    bool allSame(size_t capacity);
 };
 
 #endif

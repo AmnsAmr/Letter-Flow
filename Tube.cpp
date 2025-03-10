@@ -38,9 +38,12 @@ char Tube::pop() {
 
 void Tube::setDone() { Done = true; }
 
-bool Tube::allSame() {
+bool Tube::allSame(size_t capacity) {
     if (data.empty()) {
         return true;
+    }
+    if (data.size() < capacity) {
+        return false;
     }
     char a = data[0];
     for (int i = 1;i < data.size();i++) {
