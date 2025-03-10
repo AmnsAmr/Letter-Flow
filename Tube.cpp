@@ -5,7 +5,7 @@ using namespace std;
 
 Tube::Tube() : data() {}
 
-size_t Tube::size() const {
+size_t Tube::size()  {
     return data.size();
 }
 

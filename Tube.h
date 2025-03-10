@@ -11,7 +11,7 @@ class Tube {
 public:
     Tube();
     void setDone();
-    size_t size() const;
+    size_t size() ;
     void input(int a);
     std::vector<char>& getdata();
     bool push(char value);

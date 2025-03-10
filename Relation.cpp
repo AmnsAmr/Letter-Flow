@@ -1,18 +1,18 @@
-#include "relation.h"
+#include "Relation.h"
 #include "Tube.h"
 #include <iostream>
 
 using namespace std;
 
-relation::relation() : tubes(), tubeCapacity(0), Totaltubes(0) {}
+Relation::Relation() : tubes(), tubeCapacity(0), Totaltubes(0) {}
 
-relation::relation(size_t initialCapacity) : tubes(), tubeCapacity(0), Totaltubes(0) {
+Relation::Relation(size_t initialCapacity) : tubes(), tubeCapacity(0), Totaltubes(0) {
     tubes.reserve(initialCapacity);
 }
 
-relation::relation(const relation& other) : tubes(other.tubes), tubeCapacity(other.tubeCapacity), Totaltubes(other.Totaltubes) {}
+Relation::Relation( Relation& other) : tubes(other.tubes), tubeCapacity(other.tubeCapacity), Totaltubes(other.Totaltubes) {}
 
-relation& relation::operator=(const relation& other) {
+Relation& Relation::operator=( Relation& other) {
     if (this != &other) {
         tubes = other.tubes;
         tubeCapacity = other.tubeCapacity;
@@ -21,19 +21,17 @@ relation& relation::operator=(const relation& other) {
     return *this;
 }
 
-Tube& relation::getTube(size_t index) {
+size_t Relation::getTubecapacity() { return tubeCapacity; }
+
+Tube& Relation::getTube(size_t index) {
     return tubes[index];
 }
 
-const Tube& relation::getTube(size_t index) const {
-    return tubes[index];
-}
-
-size_t relation::size() const {
+size_t Relation::size()  {
     return tubes.size();
 }
 
-void relation::print_all() const {
+void Relation::print_all()  {
     if (tubes.empty()) return;
 
     size_t maxHeight = tubeCapacity;
@@ -57,7 +55,7 @@ void relation::print_all() const {
     cout << "\n";
 }
 
-void relation::Create() {
+void Relation::Create() {
     int Tubenum, content, empty;
     cout << "how many Full tubes in the game?\n";
     while (!(cin >> Tubenum) || Tubenum <= 0) {
@@ -93,7 +91,7 @@ void relation::Create() {
     }
 }
 
-void relation::moveLetter() {
+void Relation::moveLetter() {
     int source;
     cout << "Enter the source tube number (0 to " << tubes.size() - 1 << "): ";
     while (!(cin >> source) || source < 0 || source >= static_cast<int>(tubes.size())) {
@@ -128,7 +126,7 @@ void relation::moveLetter() {
     print_all();
 }
 
-bool relation::checkWin() {
+bool Relation::checkWin() {
     for (int i = 0;i < tubes.size();i++) {
         if (!(tubes[i].allSame(tubeCapacity))) {
             return false;

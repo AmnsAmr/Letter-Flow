@@ -1,29 +1,29 @@
-#ifndef RELATION_H
-#define RELATION_H
+#ifndef Relation_H
+#define Relation_H
 
 #include <cstddef>
 #include <vector>
 
 class Tube;
 
-class relation {
+class Relation {
 private:
     std::vector<Tube> tubes;
     size_t tubeCapacity;
     size_t Totaltubes;
 
 public:
-    relation();
-    relation(size_t initialCapacity);
-    relation(const relation& other);
-    relation& operator=(const relation& other);
+    size_t getTubecapacity();
+    Relation();
+    Relation(size_t initialCapacity);
+    Relation( Relation& other);
+    Relation& operator=( Relation& other);
     Tube& getTube(size_t index);
-    const Tube& getTube(size_t index) const;
-    size_t size() const;
-    void print_all() const;
+    size_t size() ;
+    void print_all() ;
     void Create();
     void moveLetter();
     bool checkWin();
 };
 
-#endif // RELATION_H
+#endif // Relation_H
