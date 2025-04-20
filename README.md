@@ -19,15 +19,7 @@ The goal is to make all non-empty tubes full and uniform (containing only one ty
 ## Example
 - Here’s an example of the game in action with 5 full tubes, 2 empty tubes, and a capacity of 8:
 
-- | P | | P | | G | | G | | R | |   | |   |
-| Y | | P | | K | | G | | G | |   | |   |
-| R | | Y | | Y | | R | | K | |   | |   |
-| P | | G | | K | | R | | G | |   | |   |
-| G | | P | | R | | G | | K | |   | |   |
-| Y | | P | | R | | Y | | P | |   | |   |
-| Y | | R | | K | | K | | Y | |   | |   |
-| R | | K | | K | | P | | Y | |   | |   |
-|| || || || || || |___|
+| P | | P | | G | | G | | R | | | | | | Y | | P | | K | | G | | G | | | | | | R | | Y | | Y | | R | | K | | | | | | P | | G | | K | | R | | G | | | | | | G | | P | | R | | G | | K | | | | | | Y | | P | | R | | Y | | P | | | | | | Y | | R | | K | | K | | Y | | | | | | R | | K | | K | | P | | Y | | | | | || || || || || || |___|
 Try to solve the puzzle yourself! Enter 'solve' to use the bot, or 'quit' to exit.
 Enter command (move/solve/quit): solve
 Solvable! Moves:
